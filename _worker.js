@@ -1,5 +1,6 @@
 //nat64自动填充proxyip，无需且不支持proxyip设置
 import { connect } from "cloudflare:sockets";
+let userId = ""
 const WS_READY_STATE_OPEN = 1;
 const cn_hostnames = [''];
 let CDNIP = '\u0077\u0077\u0077\u002e\u0076\u0069\u0073\u0061\u002e\u0063\u006f\u006d\u002e\u0073\u0067'
