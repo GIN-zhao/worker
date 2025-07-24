@@ -1,7 +1,7 @@
 //nat64自动填充proxyip，无需且不支持proxyip设置
 import { connect } from "cloudflare:sockets";
-let userID = ""
 const WS_READY_STATE_OPEN = 1;
+let userID = "86c50e3a-5b87-49dd-bd20-03c7f2735e40";
 const cn_hostnames = [''];
 let CDNIP = '\u0077\u0077\u0077\u002e\u0076\u0069\u0073\u0061\u002e\u0063\u006f\u006d\u002e\u0073\u0067'
 // http_ip
@@ -47,7 +47,7 @@ export default {
    */
   async fetch(request, env, ctx) {
     try {
-      userID = env.uuid;
+      userID = env.uuid || userID;
       CDNIP = env.cdnip || CDNIP;
 	  IP1 = env.ip1 || IP1;
 	  IP2 = env.ip2 || IP2;
